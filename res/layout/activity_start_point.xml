@@ -10,64 +10,11 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/welcome"
         android:textSize="45sp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignTop="@+id/button1"
-        android:layout_marginTop="56dp"
-        android:text="@string/btn_subs" />
-
-    <EditText
-        android:id="@+id/no1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="54dp"
-        android:layout_toLeftOf="@+id/button1"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/no2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/no1"
-        android:layout_alignBottom="@+id/no1"
-        android:layout_toRightOf="@+id/button1"
-        android:ems="10"
-        android:inputType="number" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/no1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:gravity="center"
-        android:text="@string/btn_add" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
-        android:textSize="35sp"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/btn_exit"
@@ -77,5 +24,56 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Button" />
+
+    <EditText
+        android:id="@+id/no2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txt_startPoint_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="246dp"
+        android:gravity="center"
+        android:text="Result here"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_marginLeft="198dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="@string/btn_subs" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no1"
+        android:layout_marginTop="204dp"
+        android:layout_toLeftOf="@+id/no2"
+        android:gravity="center"
+        android:text="@string/btn_add" />
+
+    <EditText
+        android:id="@+id/no1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="82dp"
+        android:layout_toLeftOf="@+id/btn_exit"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>

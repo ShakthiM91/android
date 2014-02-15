@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class StartPoint extends Activity {
+public class StartPoint extends Activity implements View.OnClickListener{
 
 	int num1 = 1, num2 = 1, num = 0;
 	Button add, sub;
@@ -23,32 +23,15 @@ public class StartPoint extends Activity {
 
 		add = (Button) findViewById(R.id.button1);
 		sub = (Button) findViewById(R.id.button2);
-		display = (TextView) findViewById(R.id.textView2);
+		display = (TextView) findViewById(R.id.txt_startPoint_result);
 		no1 = (EditText) findViewById(R.id.no1);
 		no2 = (EditText) findViewById(R.id.no2);
 
 		// num1 = Integer.parseInt(no1.toString());
 		// num2 = Integer.parseInt(no2.toString());
 
-		add.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				num = num1 + num2;
-				display.setText("" + num);
-			}
-		});
-		sub.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				num = num1 - num2;
-				display.setText("" + num);
-			}
-		});
+		add.setOnClickListener(this);
+		sub.setOnClickListener(this);
 	}
 
 	@Override
@@ -56,6 +39,20 @@ public class StartPoint extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.start_point, menu);
 		return true;
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch(v.getId()){
+		
+		case R.id.button1:
+			display.setText("Click Add");
+			break;
+		case R.id.button2:
+			
+			break;
+		}
 	}
 
 }
